@@ -1,0 +1,4 @@
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.vbprojAssemblyReference.cache
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Resources.resources
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.vbproj.GenerateResource.cache
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.vbproj.CoreCompileInputs.cache

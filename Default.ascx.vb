@@ -53,7 +53,8 @@ Namespace Ventrian.FileLinks
         Private Sub BindBreadCrumbs()
 
             Dim objCrumbs As New List(Of CrumbInfo)
-            Dim objFolders As ArrayList = FileSystemUtils.GetFolders(PortalId)
+            Dim objfolderManager As New FolderManager
+            Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
 
             Dim objCrumbHome As New CrumbInfo
             objCrumbHome.Url = NavigateURL()
