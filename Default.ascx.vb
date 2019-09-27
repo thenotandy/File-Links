@@ -247,8 +247,10 @@ Namespace Ventrian.FileLinks
         Private Function GetFileItems(ByVal folderID As Integer, ByVal getFolders As Boolean) As List(Of FileItem)
 
             Dim objFileItems As New List(Of FileItem)
-
-            Dim objFiles As ArrayList = FileSystemUtils.GetFilesByFolder(PortalId, folderID)
+            Dim objfolderManager As New FolderManager
+            Dim objFolder1 As IFolderInfo
+            objFolder1 = objfolderManager.GetFolder(folderID)
+            Dim objFiles As ArrayList = objfolderManager.GetFiles(objFolder1)
             For Each objFile As DotNetNuke.Services.FileSystem.FileInfo In objFiles
                 Dim objFileItem As New FileItem
                 If (IO.File.Exists(objFile.PhysicalPath)) Then
@@ -278,11 +280,11 @@ Namespace Ventrian.FileLinks
 
             If (getFolders) Then
                 Dim objFolderItems As New List(Of FileItem)
-                Dim objFolders As ArrayList = FileSystemUtils.GetFolders(PortalId)
-
+                Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
                 For Each objFolder As FolderInfo In objFolders
                     If (objFolder.FolderID = _folderID) Then
-                        Dim objSubFolders As ArrayList = FileSystemUtils.GetFoldersByParentFolder(PortalId, objFolder.FolderPath)
+                        Dim objIFolderInfo As IFolderInfo = objfolderManager.GetFolder(PortalId, objFolder.FolderPath)
+                        Dim objSubFolders As ArrayList = objfolderManager.GetFolders(objIFolderInfo)
                         For Each objSubFolder As FolderInfo In objSubFolders
                             Dim objFileItem As New FileItem
                             objFileItem.ContentType = ""
@@ -649,8 +651,8 @@ Namespace Ventrian.FileLinks
                         End If
                     End If
                 End If
-
-                Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalId)
+                Dim objfolderManager As New FolderManager
+                Dim folders As ArrayList = objfolderManager.GetFolders(PortalId)
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = _folderID) Then
                         Return
@@ -865,12 +867,12 @@ Namespace Ventrian.FileLinks
         End Sub
 
         Private Sub cmdDelete_Command(ByVal sender As Object, ByVal e As CommandEventArgs)
-
+            Dim objfolderManager As New FolderManager
             If (e.CommandName = "File") Then
 
                 Dim folderPath As String = ""
                 If (_folderID <> Null.NullInteger) Then
-                    Dim objFolders As ArrayList = FileSystemUtils.GetFolders(PortalId)
+                    Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
                     For Each objFolder As FolderInfo In objFolders
                         If (objFolder.FolderID = _folderID) Then
                             folderPath = objFolder.FolderPath
@@ -879,7 +881,7 @@ Namespace Ventrian.FileLinks
                     Next
                 Else
                     If (LinkSettings.FolderID <> Null.NullInteger) Then
-                        Dim objFolders As ArrayList = FileSystemUtils.GetFolders(PortalId)
+                        Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
                         For Each objFolder As FolderInfo In objFolders
                             If (objFolder.FolderID = LinkSettings.FolderID) Then
                                 folderPath = objFolder.FolderPath
@@ -1009,7 +1011,7 @@ Namespace Ventrian.FileLinks
 
         End Sub
 
-        Protected Sub cmdSearch_Click(ByVal sender As Object, ByVal e As EventArgs) Handles cmdSearch.Click
+        Protected Sub cmdSearch_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
 
             Try
 
