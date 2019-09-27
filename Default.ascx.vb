@@ -892,7 +892,7 @@ Namespace Ventrian.FileLinks
                 End If
 
                 If (System.IO.File.Exists(PortalSettings.HomeDirectoryMapPath & folderPath.Replace("/"c, "\"c) & e.CommandArgument)) Then
-                    FileSystemUtils.DeleteFile(PortalSettings.HomeDirectoryMapPath & folderPath.Replace("/"c, "\"c) & e.CommandArgument, PortalSettings, True)
+                    FileSystemUtils.DeleteFile("PortalSettings.HomeDirectoryMapPath & folderPath.Replace(" / "c, " \ "c) & e.CommandArgument")
                 End If
 
                 Response.Redirect(Request.RawUrl, True)
@@ -902,10 +902,10 @@ Namespace Ventrian.FileLinks
         End Sub
 
         Private Sub cmdDeleteFolder_Command(ByVal sender As Object, ByVal e As CommandEventArgs)
-
+            Dim objfolderManager As New FolderManager
             If (e.CommandName = "Folder") Then
 
-                Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalSettings.PortalId)
+                Dim folders As ArrayList = objfolderManager.GetFolders(PortalSettings.PortalId)
 
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = e.CommandArgument) Then
@@ -915,7 +915,7 @@ Namespace Ventrian.FileLinks
                             Dim directoryFiles As New List(Of System.IO.FileInfo)
                             GetChildFiles(objDirectory, directoryFiles)
                             For Each objFile In directoryFiles
-                                FileSystemUtils.DeleteFile(objFile.FullName, PortalSettings)
+                                FileSystemUtils.DeleteFile(objFile.FullName)
                             Next
 
                             Dim directoryPaths As New List(Of DirectoryInfo)
@@ -923,8 +923,9 @@ Namespace Ventrian.FileLinks
                             directoryPaths.Add(objDirectory)
 
                             For Each objDirectory In directoryPaths
-                                FileSystemUtils.DeleteFolder(PortalId, objDirectory, objDirectory.Name)
-                                FileSystemUtils.SynchronizeFolder(Me.PortalId, objDirectory.FullName, objDirectory.FullName.Replace(PortalSettings.HomeDirectoryMapPath, "").Replace("\", "/"), True)
+                                MsgBox("deleting: " & PortalSettings.HomeDirectoryMapPath & objDirectory.FullName)
+                                'FileSystemUtils.DeleteFolderRecursive(PortalSettings.HomeDirectoryMapPath & folderPath.Replace(" / "c, " \ "c))
+                                'FileSystemUtils.SynchronizeFolder(Me.PortalId, objDirectory.FullName, objDirectory.FullName.Replace(PortalSettings.HomeDirectoryMapPath, "").Replace("\", "/"), True)
                             Next
 
                         End If
@@ -939,10 +940,10 @@ Namespace Ventrian.FileLinks
         End Sub
 
         Private Sub cmdSecureFolder_Command(ByVal sender As Object, ByVal e As CommandEventArgs)
-
+            Dim objfolderManager As New FolderManager
             If (e.CommandName = "LockFolder") Then
 
-                Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalSettings.PortalId)
+                Dim folders As ArrayList = objfolderManager.GetFolders(PortalSettings.PortalId)
 
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = e.CommandArgument) Then
@@ -976,7 +977,7 @@ Namespace Ventrian.FileLinks
             If (e.CommandName = "UnlockFolder") Then
 
 
-                Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalSettings.PortalId)
+                Dim folders As ArrayList = objfolderManager.GetFolders(PortalSettings.PortalId)
 
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = e.CommandArgument) Then

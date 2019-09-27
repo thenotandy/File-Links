@@ -50,7 +50,7 @@ Namespace Ventrian.FileLinks
                     HttpContext.Current.Items("UserInfo") = objUser
 
                     Dim objRoleController As New RoleController
-                    roles = objRoleController.GetRolesByUser(_userID, _portalID)
+                    'roles = objRoleController.GetRolesByUser(_userID, _portalID)
 
                     Dim strPortalRoles As String = Join(roles, New Char() {";"c})
                     _context.Items.Add("UserRoles", ";" + strPortalRoles + ";")
@@ -124,7 +124,7 @@ Namespace Ventrian.FileLinks
 #End Region
 
         Sub ProcessRequest(ByVal context As HttpContext) Implements IHttpHandler.ProcessRequest
-
+            Dim objfolderManager As New FolderManager
             context.Response.ContentType = "text/plain"
 
             _context = context
@@ -168,9 +168,9 @@ Namespace Ventrian.FileLinks
 
                 Dim result As String = ""
 
-                Dim filePath As String = PortalController.GetCurrentPortalSettings().HomeDirectoryMapPath
+                Dim filePath As String = PortalController.Instance.GetCurrentPortalSettings().HomeDirectoryMapPath
                 If (_folderID <> Null.NullInteger) Then
-                    Dim objFolders As ArrayList = FileSystemUtils.GetFolders(_portalID)
+                    Dim objFolders As ArrayList = objfolderManager.GetFolders(_portalID)
                     For Each objFolder As FolderInfo In objFolders
                         If (objFolder.FolderID = _folderID) Then
                             filePath = objFolder.PhysicalPath
@@ -264,7 +264,8 @@ Namespace Ventrian.FileLinks
 
                         Dim folderID As Integer = Null.NullInteger
                         Dim objFolderController As New FolderController
-                        Dim folder As FolderInfo = objFolderController.GetFolder(_portalID, strFolderpath, False)
+
+                        Dim folder As FolderInfo = objfolderManager.GetFolder(_portalID, strFolderpath)
                         If (folder Is Nothing) Then
                             folderID = objFolderController.AddFolder(_portalID, strFolderpath)
                         Else

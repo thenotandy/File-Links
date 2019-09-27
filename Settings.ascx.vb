@@ -10,7 +10,7 @@ Imports Ventrian.FileLinks.Entities
 Namespace Ventrian.FileLinks
 
     Partial Public Class Settings
-        Inherits ModuleSettingsBase
+        Inherits DotNetNuke.Entities.Modules.ModuleSettingsBase
 
 #Region " Private Members "
 
@@ -32,8 +32,8 @@ Namespace Ventrian.FileLinks
         End Sub
 
         Private Sub BindFolders()
-
-            Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalId)
+            Dim objfolderManager As New FolderManager
+            Dim folders As ArrayList = objfolderManager.GetFolders(PortalId)
             For Each folder As FolderInfo In folders
                 Dim FolderItem As New ListItem
                 If folder.FolderPath = Null.NullString Then

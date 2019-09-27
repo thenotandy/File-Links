@@ -45,10 +45,10 @@ Namespace Ventrian.FileLinks
         End Sub
 
         Private Sub BindFolders()
-
+            Dim objfolderManager As New FolderManager
             Dim folderPath As String = Null.NullString()
             If (LinkSettings.FolderID <> Null.NullInteger) Then
-                Dim folderIDs As ArrayList = FileSystemUtils.GetFolders(Me.PortalId)
+                Dim folderIDs As ArrayList = objfolderManager.GetFolders(Me.PortalId)
                 For Each folder As FolderInfo In folderIDs
                     If (folder.FolderID = LinkSettings.FolderID) Then
                         folderPath = folder.FolderPath
@@ -56,7 +56,7 @@ Namespace Ventrian.FileLinks
                 Next
             End If
 
-            Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalId)
+            Dim folders As ArrayList = objfolderManager.GetFolders(PortalId)
             For Each folder As FolderInfo In folders
                 If (folderPath = Null.NullString Or folder.FolderPath.StartsWith(folderPath)) Then
                     Dim FolderItem As New ListItem
@@ -128,7 +128,7 @@ Namespace Ventrian.FileLinks
 
         End Sub
 
-        Protected Sub drpFolders_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles drpFolders.SelectedIndexChanged
+        Protected Sub drpFolders_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drpFolders.SelectedIndexChanged
 
             Try
 
@@ -140,17 +140,17 @@ Namespace Ventrian.FileLinks
 
         End Sub
 
-        Protected Sub cmdUpdate_Click(ByVal sender As Object, ByVal e As EventArgs) Handles cmdUpdate.Click
-
+        Protected Sub cmdUpdate_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdUpdate.Click
+            Dim objfolderManager As New FolderManager
             Try
 
                 If (Page.IsValid) Then
 
-                    Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalSettings.PortalId)
+                    Dim folders As ArrayList = objfolderManager.GetFolders(PortalSettings.PortalId)
 
                     For Each folder As FolderInfo In folders
                         If (folder.FolderID = Convert.ToInt32(drpFolders.SelectedValue)) Then
-                            FileSystemUtils.AddFolder(PortalSettings, folder.PhysicalPath, txtFolder.Text)
+                            objfolderManager.AddFolder(PortalSettings.PortalId, folder.PhysicalPath & txtFolder.Text)
                             If (Convert.ToInt32(drpFolders.SelectedValue) <> LinkSettings.FolderID) Then
                                 Response.Redirect(NavigateURL(Me.TabId, "", "FolderID=" & _folderID.ToString()), True)
                             Else
@@ -168,7 +168,7 @@ Namespace Ventrian.FileLinks
 
         End Sub
 
-        Protected Sub cmdCancel_Click(ByVal sender As Object, ByVal e As EventArgs) Handles cmdCancel.Click
+        Protected Sub cmdCancel_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdCancel.Click
 
             Try
 

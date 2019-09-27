@@ -3,6 +3,7 @@ Imports DotNetNuke.Common.Utilities
 Imports DotNetNuke.Entities.Modules
 Imports DotNetNuke.Entities.Modules.Actions
 Imports DotNetNuke.Security
+Imports DotNetNuke.Security.Permissions
 Imports DotNetNuke.Services.Exceptions
 Imports DotNetNuke.Services.FileSystem
 Imports DotNetNuke.Services.Localization
@@ -43,10 +44,10 @@ Namespace Ventrian.FileLinks
         End Sub
 
         Private Sub BindFolders()
-
+            Dim objfolderManager As New FolderManager
             Dim folderPath As String = Null.NullString()
             If (LinkSettings.FolderID <> Null.NullInteger) Then
-                Dim folderIDs As ArrayList = FileSystemUtils.GetFolders(Me.PortalId)
+                Dim folderIDs As ArrayList = objfolderManager.GetFolders(Me.PortalId)
                 For Each folder As FolderInfo In folderIDs
                     If (folder.FolderID = LinkSettings.FolderID) Then
                         folderPath = folder.FolderPath
@@ -54,7 +55,7 @@ Namespace Ventrian.FileLinks
                 Next
             End If
 
-            Dim folders As ArrayList = FileSystemUtils.GetFolders(PortalId)
+            Dim folders As ArrayList = objfolderManager.GetFolders(PortalId)
             For Each folder As FolderInfo In folders
                 If (folderPath = Null.NullString Or folder.FolderPath.StartsWith(folderPath)) Then
                     Dim FolderItem As New ListItem
@@ -158,7 +159,7 @@ Namespace Ventrian.FileLinks
 
         End Sub
 
-        Protected Sub cmdReturn_Click(ByVal sender As Object, ByVal e As EventArgs) Handles cmdReturn.Click
+        Protected Sub cmdReturn_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmdReturn.Click
 
             If (_folderID <> Null.NullInteger) Then
                 Response.Redirect(NavigateURL(Me.TabId, "", "FolderID=" & _folderID.ToString()), True)
@@ -168,7 +169,7 @@ Namespace Ventrian.FileLinks
 
         End Sub
 
-        Protected Sub drpFolders_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles drpFolders.SelectedIndexChanged
+        Protected Sub drpFolders_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles drpFolders.SelectedIndexChanged
 
             Try
 

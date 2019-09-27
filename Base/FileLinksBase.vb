@@ -4,7 +4,7 @@ Imports Ventrian.FileLinks.Entities
 Namespace Ventrian.FileLinks.Base
 
     Public Class FileLinksBase
-        Inherits PortalModuleBase
+        Inherits DotNetNuke.Entities.Modules.PortalModuleBase
 
 #Region " Private Members "
 
