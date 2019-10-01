@@ -54,7 +54,7 @@ Namespace Ventrian.FileLinks
 
             Dim objCrumbs As New List(Of CrumbInfo)
             Dim objfolderManager As New FolderManager
-            Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
+            Dim objFolders = objfolderManager.GetFolders(PortalId)
 
             Dim objCrumbHome As New CrumbInfo
             objCrumbHome.Url = NavigateURL()
@@ -94,7 +94,7 @@ Namespace Ventrian.FileLinks
 
         End Sub
 
-        Private Function GetFolder(ByVal path As String, ByVal folders As ArrayList) As FolderInfo
+        Private Function GetFolder(ByVal path As String, ByVal folders As IEnumerable(Of IFolderInfo)) As FolderInfo
 
             For Each objFolder As FolderInfo In folders
                 If (objFolder.FolderPath = path) Then
@@ -250,7 +250,7 @@ Namespace Ventrian.FileLinks
             Dim objfolderManager As New FolderManager
             Dim objFolder1 As IFolderInfo
             objFolder1 = objfolderManager.GetFolder(folderID)
-            Dim objFiles As ArrayList = objfolderManager.GetFiles(objFolder1)
+            Dim objFiles As List(Of DotNetNuke.Services.FileSystem.FileInfo) = objfolderManager.GetFiles(objFolder1)
             For Each objFile As DotNetNuke.Services.FileSystem.FileInfo In objFiles
                 Dim objFileItem As New FileItem
                 If (IO.File.Exists(objFile.PhysicalPath)) Then
@@ -280,11 +280,11 @@ Namespace Ventrian.FileLinks
 
             If (getFolders) Then
                 Dim objFolderItems As New List(Of FileItem)
-                Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
+                Dim objFolders = objfolderManager.GetFolders(PortalId)
                 For Each objFolder As FolderInfo In objFolders
                     If (objFolder.FolderID = _folderID) Then
                         Dim objIFolderInfo As IFolderInfo = objfolderManager.GetFolder(PortalId, objFolder.FolderPath)
-                        Dim objSubFolders As ArrayList = objfolderManager.GetFolders(objIFolderInfo)
+                        Dim objSubFolders = objfolderManager.GetFolders(objIFolderInfo)
                         For Each objSubFolder As FolderInfo In objSubFolders
                             Dim objFileItem As New FileItem
                             objFileItem.ContentType = ""
@@ -652,7 +652,7 @@ Namespace Ventrian.FileLinks
                     End If
                 End If
                 Dim objfolderManager As New FolderManager
-                Dim folders As ArrayList = objfolderManager.GetFolders(PortalId)
+                Dim folders As IList = objfolderManager.GetFolders(PortalId)
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = _folderID) Then
                         Return
@@ -872,7 +872,7 @@ Namespace Ventrian.FileLinks
 
                 Dim folderPath As String = ""
                 If (_folderID <> Null.NullInteger) Then
-                    Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
+                    Dim objFolders As IList = objfolderManager.GetFolders(PortalId)
                     For Each objFolder As FolderInfo In objFolders
                         If (objFolder.FolderID = _folderID) Then
                             folderPath = objFolder.FolderPath
@@ -881,7 +881,7 @@ Namespace Ventrian.FileLinks
                     Next
                 Else
                     If (LinkSettings.FolderID <> Null.NullInteger) Then
-                        Dim objFolders As ArrayList = objfolderManager.GetFolders(PortalId)
+                        Dim objFolders As IList = objfolderManager.GetFolders(PortalId)
                         For Each objFolder As FolderInfo In objFolders
                             If (objFolder.FolderID = LinkSettings.FolderID) Then
                                 folderPath = objFolder.FolderPath
@@ -905,7 +905,7 @@ Namespace Ventrian.FileLinks
             Dim objfolderManager As New FolderManager
             If (e.CommandName = "Folder") Then
 
-                Dim folders As ArrayList = objfolderManager.GetFolders(PortalSettings.PortalId)
+                Dim folders As IList = objfolderManager.GetFolders(PortalSettings.PortalId)
 
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = e.CommandArgument) Then
@@ -943,7 +943,7 @@ Namespace Ventrian.FileLinks
             Dim objfolderManager As New FolderManager
             If (e.CommandName = "LockFolder") Then
 
-                Dim folders As ArrayList = objfolderManager.GetFolders(PortalSettings.PortalId)
+                Dim folders As IList = objfolderManager.GetFolders(PortalSettings.PortalId)
 
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = e.CommandArgument) Then
@@ -977,7 +977,7 @@ Namespace Ventrian.FileLinks
             If (e.CommandName = "UnlockFolder") Then
 
 
-                Dim folders As ArrayList = objfolderManager.GetFolders(PortalSettings.PortalId)
+                Dim folders As IList = objfolderManager.GetFolders(PortalSettings.PortalId)
 
                 For Each folder As FolderInfo In folders
                     If (folder.FolderID = e.CommandArgument) Then

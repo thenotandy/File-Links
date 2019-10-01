@@ -159,6 +159,7 @@ Namespace Ventrian.FileLinks
 
 
             Dim objFile As HttpPostedFile = _context.Request.Files("Filedata")
+            Dim objFiles As New FileManager
             If (objFile IsNot Nothing) Then
                 Dim objPortalController As New PortalController()
                 If (objPortalController.HasSpaceAvailable(_portalID, objFile.ContentLength) = False) Then
@@ -261,28 +262,34 @@ Namespace Ventrian.FileLinks
                             Case "png" : strContentType = "image/png"
                             Case Else : strContentType = "application/octet-stream"
                         End Select
-
+                        Dim ifolderID As IFolderInfo
                         Dim folderID As Integer = Null.NullInteger
                         Dim objFolderController As New FolderController
 
                         Dim folder As FolderInfo = objfolderManager.GetFolder(_portalID, strFolderpath)
                         If (folder Is Nothing) Then
-                            folderID = objFolderController.AddFolder(_portalID, strFolderpath)
+                            ifolderID = objfolderManager.AddFolder(_portalID, strFolderpath)
+                            folderID = ifolderID.FolderID
                         Else
                             folderID = folder.FolderID
                         End If
 
                         If (strFileName.IndexOf("'") = -1) Then
-                            Dim objFiles As New FileController
-                            objFiles.AddFile(_portalID, strFileName, strExtension, finfo.Length, width, height, strContentType, strFolderpath, folderID, True)
+
+                            objFiles.AddFile(ifolderID, strFileName, objFile.InputStream)
+                            'objFiles.AddFile(_portalID, strFileName, strExtension, finfo.Length, width, height, strContentType, strFolderpath, folderID, True)
                         End If
 
                     Else
-                        FileSystemUtils.UploadFile(filePath, objFile)
+                        'FileSystemUtils.UploadFile(filePath, objFile)
+                        Dim ifolderID As IFolderInfo = objfolderManager.GetFolder(_portalID, filePath)
+                        objFiles.AddFile(ifolderID, objFile.FileName, objFile.InputStream)
                     End If
 
                 Else
-                    FileSystemUtils.UploadFile(filePath, objFile)
+                    'FileSystemUtils.UploadFile(filePath, objFile)
+                    Dim ifolderID As IFolderInfo = objfolderManager.GetFolder(_portalID, filePath)
+                    objFiles.AddFile(ifolderID, objFile.FileName, objFile.InputStream)
                 End If
 
                 If (result <> "") Then
@@ -290,8 +297,11 @@ Namespace Ventrian.FileLinks
                     _context.Response.End()
                 End If
 
-                Dim objFileController As New FileController
-                Dim objSavedFile As DotNetNuke.Services.FileSystem.FileInfo = objFileController.GetFile(fileName, _portalID, _folderID)
+                Dim objFileController As New FileManager
+                Dim objiFolderInfo As IFolderInfo
+                objiFolderInfo.FolderId = _folderID
+                Dim objSavedFile As DotNetNuke.Services.FileSystem.FileInfo = objFileController.GetFile(objiFolderInfo, fileName)
+                'Dim objSavedFile As DotNetNuke.Services.FileSystem.FileInfo = objFileController.GetFile(fileName, _portalID, _folderID)
                 If (objSavedFile IsNot Nothing) Then
                     Select Case objSavedFile.Extension.ToLower()
                         Case "css"
@@ -310,7 +320,8 @@ Namespace Ventrian.FileLinks
                             objSavedFile.ContentType = "text/xml"
                     End Select
 
-                    objFileController.UpdateFile(objSavedFile.FileId, objSavedFile.FileName, objSavedFile.Extension, objSavedFile.Size, objSavedFile.Width, objSavedFile.Height, objSavedFile.ContentType, objSavedFile.Folder, objSavedFile.FolderId)
+                    objFileController.UpdateFile(objSavedFile)
+                    'objFileController.UpdateFile(objSavedFile.FileId, objSavedFile.FileName, objSavedFile.Extension, objSavedFile.Size, objSavedFile.Width, objSavedFile.Height, objSavedFile.ContentType, objSavedFile.Folder, objSavedFile.FolderId)
                 End If
 
                 _context.Response.Write(objFile.FileName)

@@ -2,3 +2,11 @@ C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.vbprojAssemb
 C:\Users\AndyP\source\repos\File-Links\obj\Debug\Resources.resources
 C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.vbproj.GenerateResource.cache
 C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.vbproj.CoreCompileInputs.cache
+C:\Users\AndyP\source\bin\Ventrian.FileLinks.dll.config
+C:\Users\AndyP\source\bin\Ventrian.FileLinks.dll
+C:\Users\AndyP\source\bin\Ventrian.FileLinks.pdb
+C:\Users\AndyP\source\bin\Ventrian.FileLinks.xml
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.vbproj.CopyComplete
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.dll
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.xml
+C:\Users\AndyP\source\repos\File-Links\obj\Debug\Ventrian.FileLinks.pdb

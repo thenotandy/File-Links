@@ -1,0 +1,1052 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Ventrian.FileLinks
+</name>
+</assembly>
+<members>
+<member name="T:My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._rptBreadCrumbs">
+<summary>
+rptBreadCrumbs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._litTicketID">
+<summary>
+litTicketID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._litFolderID">
+<summary>
+litFolderID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._litModuleID">
+<summary>
+litModuleID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._litTabID">
+<summary>
+litTabID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._litFileTypes">
+<summary>
+litFileTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._litSelectFileDescription">
+<summary>
+litSelectFileDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._lblSelectFiles">
+<summary>
+lblSelectFiles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._divFolders">
+<summary>
+divFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._drpFolders">
+<summary>
+drpFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFiles._cmdReturn">
+<summary>
+cmdReturn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._rptBreadCrumbs">
+<summary>
+rptBreadCrumbs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._plParentFolder">
+<summary>
+plParentFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._drpFolders">
+<summary>
+drpFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._plFolder">
+<summary>
+plFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._txtFolder">
+<summary>
+txtFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._valFolder">
+<summary>
+valFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._cmdUpdate">
+<summary>
+cmdUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.AddFolder._cmdCancel">
+<summary>
+cmdCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._rptBreadCrumbs">
+<summary>
+rptBreadCrumbs control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._txtSearch">
+<summary>
+txtSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._cmdSearch">
+<summary>
+cmdSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._pnlCommandBar">
+<summary>
+pnlCommandBar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lnkAddNewFiles">
+<summary>
+lnkAddNewFiles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lnkAddFolder">
+<summary>
+lnkAddFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._phSearchCriteria">
+<summary>
+phSearchCriteria control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lblSearch">
+<summary>
+lblSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lnkSearchClear">
+<summary>
+lnkSearchClear control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._phFiles">
+<summary>
+phFiles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lblConfigure">
+<summary>
+lblConfigure control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._phTerms">
+<summary>
+phTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lblAcceptTerms">
+<summary>
+lblAcceptTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._litTerms">
+<summary>
+litTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lblEditFile">
+<summary>
+lblEditFile control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks._Default._lblDescription">
+<summary>
+lblDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._tblGeneral">
+<summary>
+tblGeneral control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plSelectFolder">
+<summary>
+plSelectFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._drpSelectFolder">
+<summary>
+drpSelectFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plDisplayFolders">
+<summary>
+plDisplayFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._chkDisplayFolders">
+<summary>
+chkDisplayFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plDisplayFilesInFolders">
+<summary>
+plDisplayFilesInFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._chkDisplayFilesInFolders">
+<summary>
+chkDisplayFilesInFolders control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plTrackDownloads">
+<summary>
+plTrackDownloads control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._chkTrackDownloads">
+<summary>
+chkTrackDownloads control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plExtensionFilter">
+<summary>
+plExtensionFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtExtensionFilter">
+<summary>
+txtExtensionFilter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plSortBy">
+<summary>
+plSortBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._drpSortBy">
+<summary>
+drpSortBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plSortDirection">
+<summary>
+plSortDirection control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._drpSortDirection">
+<summary>
+drpSortDirection control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plMaxFileSize">
+<summary>
+plMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtMaxFileSize">
+<summary>
+txtMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._valMaxFileSize">
+<summary>
+valMaxFileSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._valMaxFileSizeIsNumber">
+<summary>
+valMaxFileSizeIsNumber control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plSecureUrl">
+<summary>
+plSecureUrl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtSecureUrl">
+<summary>
+txtSecureUrl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._dshImageSettings">
+<summary>
+dshImageSettings control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._tblImageSettings">
+<summary>
+tblImageSettings control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plResizeImages">
+<summary>
+plResizeImages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._chkResizeImages">
+<summary>
+chkResizeImages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plRenameImages">
+<summary>
+plRenameImages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._chkRenameImages">
+<summary>
+chkRenameImages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plCompressionType">
+<summary>
+plCompressionType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._drpCompressionType">
+<summary>
+drpCompressionType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plImageWidth">
+<summary>
+plImageWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtImageWidth">
+<summary>
+txtImageWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._valImageWidth">
+<summary>
+valImageWidth control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._valImageWidthIsNumber">
+<summary>
+valImageWidthIsNumber control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plImageHeight">
+<summary>
+plImageHeight control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtImageHeight">
+<summary>
+txtImageHeight control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._valImageHeight">
+<summary>
+valImageHeight control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._valImageHeightIsNumber">
+<summary>
+valImageHeightIsNumber control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._dshTemplate">
+<summary>
+dshTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._tblTemplate">
+<summary>
+tblTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plHeader">
+<summary>
+plHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtTemplateHeader">
+<summary>
+txtTemplateHeader control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plItem">
+<summary>
+plItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtTemplateItem">
+<summary>
+txtTemplateItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plSubItem">
+<summary>
+plSubItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtTemplateSubItem">
+<summary>
+txtTemplateSubItem control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plSubEmpty">
+<summary>
+plSubEmpty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtTemplateSubEmpty">
+<summary>
+txtTemplateSubEmpty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plFooter">
+<summary>
+plFooter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtTemplateFooter">
+<summary>
+txtTemplateFooter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plEmpty">
+<summary>
+plEmpty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtTemplateEmpty">
+<summary>
+txtTemplateEmpty control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._dshTemplateHelp">
+<summary>
+dshTemplateHelp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._tblTemplateHelp">
+<summary>
+tblTemplateHelp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblContentType">
+<summary>
+lblContentType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblDateCreated">
+<summary>
+lblDateCreated control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblDateModified">
+<summary>
+lblDateModified control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._Label2">
+<summary>
+Label2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblDelete">
+<summary>
+lblDelete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblDescription">
+<summary>
+lblDescription control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblDownloadCount">
+<summary>
+lblDownloadCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblExtension">
+<summary>
+lblExtension control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblLink">
+<summary>
+lblLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblIcon">
+<summary>
+lblIcon control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblIconUrl">
+<summary>
+lblIconUrl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblIsAlternate">
+<summary>
+lblIsAlternate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblIsFile">
+<summary>
+lblIsFile control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblIsFolder">
+<summary>
+lblIsFolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblName">
+<summary>
+lblName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblNameNoExtension">
+<summary>
+lblNameNoExtension control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblSecure">
+<summary>
+lblSecure control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblSize">
+<summary>
+lblSize control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._dshTerms">
+<summary>
+dshTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._tblTermsConditions">
+<summary>
+tblTermsConditions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plEnableTerms">
+<summary>
+plEnableTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._chkEnableTerms">
+<summary>
+chkEnableTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._lblEnableTerms">
+<summary>
+lblEnableTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._plTermsTemplate">
+<summary>
+plTermsTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:Ventrian.FileLinks.Settings._txtTerms">
+<summary>
+txtTerms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>
